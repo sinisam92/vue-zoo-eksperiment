@@ -20,14 +20,14 @@
   >
   <div class="moj-div">
         <form @submit.prevent="addAnimal" class="form-group">
-            <label>Spicies</label>
+            
             <input v-model="newAnimal.spicies" placeholder="Spicies">
-            <label>Name</label>
+            
             <input v-model="newAnimal.name" placeholder="Name">
-            <label>Date Of Birth</label>
-            <input v-model="newAnimal.dateOfBirth" placeholder="DAte Of Birth">
+            
+            <input v-model="newAnimal.dateOfBirth" placeholder="Date Of Birth">
 
-            <select v-model="newAnimal.sector">
+            <select v-model="newAnimal.sector" aria-placeholder="Select Section">
                 <option disabled value="">Please select one</option>
                 <option v-for="(sector, index) in sectors" :key="index" :value="sector">{{sector.name}}</option>
             </select>
