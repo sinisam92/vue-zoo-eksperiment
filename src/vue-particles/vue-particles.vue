@@ -53,19 +53,18 @@
                     <!-- <td v-if="animal.dateOfBirth">{{animal.dateOfBirth}}</td>
                     <td v-if="!animal.dateOfBirth">'Nepoznat'</td> -->
                     <td>{{animal.sector.name}}</td>
-                    <td>
+                    
                     <button @click="removeAnimal(animal)" type="submit" class="btn btn-primary">Remove</button>
-                    </td>
-                    <td>
+                  
                     <button @click="moveToTop(animal)" type="submit" class="btn btn-primary">Move to top</button>
-                    </td>
+                    
                 </tr>
             </tbody>
         </table>
          </div>
          
         <div class="table2-container">
-            <table border="2">
+            <table border="2" class="border2">
             <thead>
                 <td>Name</td>
                 <td>Surface</td>
@@ -74,9 +73,9 @@
                 <tr v-for="(sector, index) in sectors" :key="index">
                     <td>{{sector.name}}</td>
                     <td>{{sector.surface}}</td>
-                    <td>
-                        <button @click="showAnimals(sector)" type="submit" class="btn btn-primary">Vidi Zivotinje</button>
-                    </td>
+
+                    <button @click="showAnimals(sector)" type="submit" class="btn btn-primary">Vidi Zivotinje</button>
+                    
                 </tr>
             </tbody>
         </table>
@@ -362,6 +361,11 @@ const sectors = [
 </script>
 
 <style scoped>
+* {
+  margin: 0 auto;
+ 
+  box-sizing: border-box;
+}
 h3 {
   margin: 40px 0 0;
 }
@@ -369,9 +373,14 @@ h3 {
     padding-top: 1rem;
 }
 .btn {
-    margin: 1rem;
+    margin: 5px;
     color: rgb(12, 11, 11);
     background-color: #fff;
+}
+.border2 {
+  -webkit-border-radius:4px;
+    border-radius: 4px;
+   
 }
 .table2-container {
     margin-left: 40px;
