@@ -391,10 +391,11 @@ table {
   position: absolute;
   color: #fff;
   font-family: sans-serif;
-  transform: 50%,50%;
+  
 }
 .moj-div h1 {
   font-size: 60px;
+  text-shadow: 8px 8px #000;
 }
 .table-container {
   display: flex;
